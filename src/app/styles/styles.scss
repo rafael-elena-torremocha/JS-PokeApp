@@ -1,0 +1,26 @@
+@import './custom';
+@import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+.header {
+  height: 80px;
+  background-color: cornflowerblue;
+}
+
+.main {
+  height: calc(100% - 80px);
+}
