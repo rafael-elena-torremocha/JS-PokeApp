@@ -1,11 +1,10 @@
-import { showList } from './api/call-api-list';
+import { showList, toggleList } from './api/call-api-list';
 
 import './styles/styles.scss';
 import 'bootstrap';
 
 function addListeners() {
-  document.getElementById('fetch-pokemon').addEventListener('click', showList);
-
+  document.getElementById('toggle-list').addEventListener('click', toggleList);
 }
 window.onload = function () {
   addListeners();
