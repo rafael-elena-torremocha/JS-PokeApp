@@ -1,14 +1,13 @@
-import { fetchPokemon } from './api/call-api-details';
+import { showList } from './api/call-api-list';
 
 import './styles/styles.scss';
 import 'bootstrap';
 
 function addListeners() {
-  // TODO
-  console.log('addListeners');
+  document.getElementById('fetch-pokemon').addEventListener('click', showList);
+
 }
 window.onload = function () {
   addListeners();
-  console.log(fetchPokemon);
 
 };

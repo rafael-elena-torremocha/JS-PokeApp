@@ -1,0 +1,27 @@
+const pokeApiDetails = `https://pokeapi.co/api/v2/pokemon/`;
+
+fetch(pokeApiDetails)
+    .then(response => response.json())
+    .then((data) => { 
+        console.log(data);
+        const resultados = data.results;
+    showList(resultados);
+})
+.catch(error => console.log('Error al llamar a la Api:', error));
+
+function showList(resultados) {
+    const pokemonList = document.getElementById('pokemonList');
+    const ul = document.createElement('ul');
+
+    resultados.forEach(result => {
+        const li = document.createElement('li');
+        li.textContent = result.name;
+
+        ul.appendChild(li);
+    });
+
+    pokemonList.appendChild(ul);
+}
+
+
+export { showList };
